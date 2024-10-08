@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'merriweather';
+    src: url('fonts/merriweather-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('fonts/lato-regular.ttf') format('truetype');
+}
+
 :root {
     --white: #FFFFFF;
     --tan: #F4F1EA;
@@ -15,4 +25,40 @@ html, body{
     margin: 0;
     height: 100%;
     text-wrap: pretty;
+}
+
+/*home page*/
+.nav {
+    background-color: var(--tan);
+    margin: 50px auto;
+    width: 50vw;
+    outline: var(--brown) solid 2px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
+    justify-content: center;
+}
+
+a h2 {
+    font-family: 'merriweather';
+    color: var(--brown);
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
+}
+
+/*alpha*/
+h1 {
+    font-family: 'merriweather';
+    font-size: 48px;
+    color: var(--brown);
+    text-align: center;
+    padding: 20px;
+}
+
+h3 {
+    font-family: 'merriweather';
+    font-size: 24px;
+    color: var(--brown);
+    text-align: center;
+    padding: 20px;
 }
