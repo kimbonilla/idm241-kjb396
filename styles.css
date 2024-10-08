@@ -73,7 +73,8 @@ h1 {
 
 video {
     display: block;
-    max-width: 80vw;
+    width: 100%;
+    max-width: 800px;
     margin: auto;
     padding-top: 20px;
 }
