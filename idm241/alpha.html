@@ -9,12 +9,8 @@
 </head>
 <body>
     <h1>Alpha</h1>
-    <div class="video">
-        <h3>Goodreads "Want to Read" Button</h3>
-        <a href="https://www.goodreads.com/recommendations" target="_blank"><p>Link to existing microinteraction</p></a>
-        <video width="900px" controls>
-            <source src="goodreads-microinteraction.mp4" type="video/mp4">
-        </video>
+    <div class="title">
+        <a href="https://www.goodreads.com/recommendations" target="_blank"><h3>Goodreads "Want to Read" Button</h3></a>
     </div>
     <div class="description">
         <div class="trigger">
@@ -48,62 +44,131 @@
         <h3>Rules</h3>
         <p>Want to Read- Default</p>
         <ul>
-            <li>Hover ON- Cursor changes to finger and  background becomes 10% darker</li>
+            <li>Hover ON</li>
             <ul>
-                <li>2 second delay- "Add to your to-read shelf." appears as tagline</li>
+                <li>Cursor changes to finger</li>
+                <li>Background becomes 10% darker</li>
+                <li>2 second delay</li>
+                <ul>
+                    <li>"Add to your to-read shelf." appears as tagline</li>
+                </ul>
             </ul>
-            <li>Hover OFF- Cursor changes back to pointer and background changes back to 10% lighter</li>
-            <li>Mouse UP- Button width changes to 55 px and text changes to "saving..."</li>
+            <li>Hover OFF</li>
             <ul>
-                <li>0.2 second delay- Button width changes to 100 px and content changes to a checkmark with the text "Want to Read"</li>
+                <li>Cursor changes back to pointer</li>
+                <li>Background changes back to 10% lighter</li>
             </ul>
-            <li>Database record flag set to true</li>
+            <li>Mouse UP</li>
+            <ul>
+                <li>Button width changes to 55 px</li>
+                <li>Text changes to "saving..."</li>
+                <li>Database record flag is set to true</li>
+            </ul>
+            <ul>
+                <li>0.2 second delay</li>
+                <ul>
+                    <li>Button width changes to 100 px</li>
+                    <li>Content changes to a checkmark with the text "Want to Read"</li>
+                </ul>
+            </ul>
         </ul>
         <p>Want to Read- Active</p>
         <ul>
-            <li>Hover ON- Cursor changes to finger</li>
+            <li>Hover ON</li>
             <ul>
-                <li>2 second delay- "Remove from your to-read shelf." appears as tagline</li>
+                <li>Cursor changes to finger</li>
+                <li>2 second delay</li>
+                <ul>
+                    <li>"Remove from your to-read shelf." appears as tagline</li>
+                </ul>
             </ul>
-            <li>Hover OFF- Cursor changes back to pointer</li>
-            <li>Mouse UP- Button width changes to 55 px and text changes to "saving..."</li>
+            <li>Hover OFF</li>
             <ul>
-                <li>0.2 second delay- Button width changes to 80 px and text changes to "Want to Read"</li>
+                <li>Cursor changes back to pointer</li>
             </ul>
-            <li>Database record flag set to false</li>
+            <li>Mouse UP</li>
+            <ul>
+                <li>Button width changes to 55 px</li>
+                <li>Text changes to "saving..."</li>
+                <li>Database record flag is set to false</li>
+                <li>0.2 second delay</li>
+                <ul>
+                    <li>Button width changes to 80 px</li>
+                    <li>Text changes to "Want to Read"</li>
+                </ul>
+            </ul>
         </ul>
         </div>
         <div class="feedback">
         <h3>Feedback</h3>
         <p>Want to Read- Default</p>
         <ul>
-            <li>Hover ON- Cursor changes to finger and  background becomes 10% darker</li>
+            <li>Hover ON</li>
             <ul>
-                <li>2 second delay- "Add to your to-read shelf." appears as tagline</li>
+                <li>Cursor changes to finger</li>
+                <li>Background becomes 10% darker</li>
+                <li>2 second delay</li>
+                <ul>
+                    <li>"Add to your to-read shelf." appears as tagline</li>
+                </ul>
             </ul>
-            <li>Hover OFF- Cursor changes back to pointer and background changes back to 10% lighter</li>
-            <li>Mouse UP- Button width changes to 55 px and text changes to "saving..."</li>
+            <li>Hover OFF</li>
             <ul>
-                <li>0.2 second delay- Button width changes to 100 px and content changes to a checkmark with the text "Want to Read"</li>
+                <li>Cursor changes back to pointer</li>
+                <li>Background changes back to 10% lighter</li>
+            </ul>
+            <li>Mouse UP</li>
+            <ul>
+                <li>Button width changes to 55 px</li>
+                <li>Text changes to "saving..."</li>
+            </ul>
+            <ul>
+                <li>0.2 second delay</li>
+                <ul>
+                    <li>Button width changes to 100 px</li>
+                    <li>Content changes to a checkmark with the text "Want to Read"</li>
+                </ul>
             </ul>
         </ul>
         <p>Want to Read- Active</p>
         <ul>
-            <li>Hover ON- Cursor changes to finger</li>
+            <li>Hover ON</li>
             <ul>
-                <li>2 second delay- "Remove from your to-read shelf." appears as tagline</li>
+                <li>Cursor changes to finger</li>
+                <li>2 second delay</li>
+                <ul>
+                    <li>"Remove from your to-read shelf." appears as tagline</li>
+                </ul>
             </ul>
-            <li>Hover OFF- Cursor changes back to pointer</li>
-            <li>Mouse UP- Button width changes to 55 px and text changes to "saving..."</li>
+            <li>Hover OFF</li>
             <ul>
-                <li>0.2 second delay- Button width changes to 80 px and text changes to "Want to Read"</li>
+                <li>Cursor changes back to pointer</li>
+            </ul>
+            <li>Mouse UP</li>
+            <ul>
+                <li>Button width changes to 55 px</li>
+                <li>Text changes to "saving..."</li>
+                <li>0.2 second delay</li>
+                <ul>
+                    <li>Button width changes to 80 px</li>
+                    <li>Text changes to "Want to Read"</li>
+                </ul>
             </ul>
         </ul>
         </div>
         <div class="loops-and-modes">
-        <h3>Loops &#38; Modes</h3>
-        <p>None</p>
+            <h3>Loops &#38; Modes</h3>
+            <p>None</p>
         </div>
+    </div>
+    <div class="video">
+        <h3>Video</h3>
+        <video width="900px" controls>
+            <source src="goodreads-microinteraction.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="space">
+    <p>&nbsp;</p>
     </div>
 </body>
 </html>

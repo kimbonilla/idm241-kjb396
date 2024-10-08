@@ -59,26 +59,6 @@ h1 {
     padding: 20px;
 }
 
-.video {
-    display: block;
-    width: fit-content;
-    max-width: 80vw;
-    margin: 50px auto;
-    padding: 50px;
-    background-color: var(--tan);
-    outline: var(--brown) solid 2px;
-    border-radius: 20px;
-    box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
-}
-
-video {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    padding-top: 20px;
-}
-
 .description {
     display: flex;
     flex-wrap: wrap;
@@ -115,6 +95,35 @@ p {
     text-decoration: underline ;
 }
 
+ul {
+    padding-left: 25px;
+}
+
 .loops-and-modes p{
     text-decoration: none;
+}
+
+.video {
+    display: block;
+    width: fit-content;
+    max-width: 80vw;
+    margin: 25px auto 50px;
+    padding: 50px;
+    background-color: var(--tan);
+    outline: var(--brown) solid 2px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
+}
+
+video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.space p{
+    text-decoration: none;
+    margin: 0;
 }
