@@ -31,8 +31,9 @@ html, body{
     text-wrap: pretty;
 }
 
-/*home page*/
-.nav {
+/*index page*/
+.nav a {
+    display: block;
     background-color: var(--tan);
     margin: 50px auto;
     width: 50vw;
