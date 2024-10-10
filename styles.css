@@ -14,6 +14,7 @@
     --brown: #382110;
     --black: #181818;
     --green: #409D69;
+    --dark-green: #3B9160;
     --turquoise: #00635D;
     --light-gray: #F2F2F2;
     --med-gray: #999999;
@@ -127,4 +128,26 @@ video {
 .space p{
     text-decoration: none;
     margin: 0;
+}
+
+/*alpha build*/
+.alpha-button {
+    display: flex;
+    justify-content: center;
+}
+
+.alpha-button button{
+    font-family: 'lato';
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.alpha-button button:hover {
+    background-color: var(--dark-green);
 }
