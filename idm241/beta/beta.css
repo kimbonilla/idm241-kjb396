@@ -42,6 +42,7 @@ h1 {
     margin: 0;
 }
 
+
 .descriptions {
     display: flex;
     flex-wrap: wrap;
@@ -71,8 +72,11 @@ h3 {
     font-family: 'merriweather';
     font-size: 24px;
     color: var(--brown);
-    text-align: center;
     margin-top: 50px;
+}
+
+.title h3 {
+    text-align: center;
 }
 
 p, ul{
