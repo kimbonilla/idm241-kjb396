@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'merriweather';
+    src: url('../../fonts/merriweather-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../../fonts/lato-regular.ttf') format('truetype');
+}
+
+:root {
+    --white: #FFFFFF;
+    --tan: #F4F1EA;
+    --brown: #382110;
+    --black: #181818;
+    --green: #409D69;
+    --dark-green: #3B9160;
+    --turquoise: #00635D;
+    --light-gray: #F2F2F2;
+    --med-gray: #999999;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: var(--white);
+    color: var(--brown);
+    margin: 0;
+    height: 100%;
+    text-wrap: pretty;
+}
+
+/*description*/
+h1 {
+    font-family: 'merriweather';
+    font-size: 48px;
+    color: var(--brown);
+    text-align: center;
+    padding: 50px 0 25px;
+    margin: 0;
+}
+
+.descriptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.descriptions > div {
+    max-width: 500px;
+    margin: 25px;
+    padding: 50px;
+    background-color: var(--tan);
+    outline: var(--brown) solid 2px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-family: 'merriweather';
+    font-size: 32px;
+    color: var(--brown);
+    text-decoration: underline;
+    text-align: center;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'merriweather';
+    font-size: 24px;
+    color: var(--brown);
+    text-align: center;
+    margin-top: 50px;
+}
+
+p, ul{
+    font-family: 'lato';
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--brown);
+    margin-bottom: 0;
+}
+
+p {
+    text-decoration: underline ;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+.wtr-loops-and-modes p, .stars-loops-and-modes p, .ni-loops-and-modes p{
+    text-decoration: none;
+}
+
+.video {
+    display: block;
+    width: fit-content;
+    max-width: 80vw;
+    margin: 25px auto 50px;
+    padding: 50px;
+    background-color: var(--tan);
+    outline: var(--brown) solid 2px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
+}
+
+video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto 0;
+    border-radius: 15px;
+}
+
+.space p{
+    text-decoration: none;
+    margin: 0;
+}
