@@ -147,69 +147,37 @@ video {
     cursor: pointer;
 }
 
-/*star ratings*/
-/*.stars {
-    margin: 5px auto 0;
-    display: flex;
-    flex-direction: row-reverse;   
-}
-
-.stars img {
-    cursor: pointer;
-}*/
-
-
-/* style for normal state */
-/*.stars img {
-    filter: grayscale(100%);
-    transition: filter 300ms ease;
-}*/
-
-/* style for hovered and previous stars */
-/*.stars img:hover ~ img,
-.stars img:hover {
-    filter: brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(676%) hue-rotate(1deg) brightness(101%);
-    transition: filter 300ms ease;
-}/*
-
-/*.stars img:click ~ img,
-.stars img:hover {
-    filter: brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(676%) hue-rotate(1deg) brightness(101%);
-    transition: filter 300ms ease;
-}*/
-
-/* Star container */
+/* star container */
 .star-rating {
     display: flex;
     gap: 5px;
     cursor: pointer;
 }
 
-/* Default star style */
+/* default star style */
 .star {
     width: 30px;
     height: 30px;
     background: url('star.svg') no-repeat center/contain;
-    fill: #ddd;
+    fill: var(--med-gray);
     transition: fill 0.3s ease, opacity 0.3s ease;
     opacity: 0.5;
 }
 
-/* Hover state */
+/* hover state */
 .star:hover,
 .star.hovered {
     opacity: 1;
     background: url('star.svg') no-repeat center/contain;
-    filter: brightness(0) saturate(100%) invert(89%) sepia(29%) saturate(1766%) hue-rotate(15deg) brightness(103%) contrast(101%);
+    filter: brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(676%) hue-rotate(1deg) brightness(101%);
 }
 
-/* Clicked (selected) state */
-.star.selected {
+/* clicked (selected) state */
+.star.selected, .star :active{
     opacity: 1;
     background: url('star.svg') no-repeat center/contain;
-    filter: brightness(0) saturate(100%) invert(92%) sepia(64%) saturate(2742%) hue-rotate(16deg) brightness(107%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(600%) hue-rotate(1deg) brightness(120%);
 }
-
 
 /*not interested button*/
 .ni-button {
