@@ -18,6 +18,8 @@
     --turquoise: #00635D;
     --light-gray: #F2F2F2;
     --med-gray: #999999;
+    --yellow: #FDD44F;
+    -orange: #FFBD27;
 }
 
 * {
@@ -115,4 +117,111 @@ video {
 .space p{
     text-decoration: none;
     margin: 0;
+}
+
+/*build*/
+.build {
+    width: 142px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.wtr-button {
+    display: flex;
+    justify-content: center;
+}
+
+.wtr-button button{
+    font-family: 'lato';
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/*star ratings*/
+/*.stars {
+    margin: 5px auto 0;
+    display: flex;
+    flex-direction: row-reverse;   
+}
+
+.stars img {
+    cursor: pointer;
+}*/
+
+
+/* style for normal state */
+/*.stars img {
+    filter: grayscale(100%);
+    transition: filter 300ms ease;
+}*/
+
+/* style for hovered and previous stars */
+/*.stars img:hover ~ img,
+.stars img:hover {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(676%) hue-rotate(1deg) brightness(101%);
+    transition: filter 300ms ease;
+}/*
+
+/*.stars img:click ~ img,
+.stars img:hover {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(676%) hue-rotate(1deg) brightness(101%);
+    transition: filter 300ms ease;
+}*/
+
+/* Star container */
+.star-rating {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* Default star style */
+.star {
+    width: 30px;
+    height: 30px;
+    background: url('star.svg') no-repeat center/contain;
+    fill: #ddd;
+    transition: fill 0.3s ease, opacity 0.3s ease;
+    opacity: 0.5;
+}
+
+/* Hover state */
+.star:hover,
+.star.hovered {
+    opacity: 1;
+    background: url('star.svg') no-repeat center/contain;
+    filter: brightness(0) saturate(100%) invert(89%) sepia(29%) saturate(1766%) hue-rotate(15deg) brightness(103%) contrast(101%);
+}
+
+/* Clicked (selected) state */
+.star.selected {
+    opacity: 1;
+    background: url('star.svg') no-repeat center/contain;
+    filter: brightness(0) saturate(100%) invert(92%) sepia(64%) saturate(2742%) hue-rotate(16deg) brightness(107%) contrast(99%);
+}
+
+
+/*not interested button*/
+.ni-button {
+    margin: 0 auto;
+}
+
+.ni-button button{
+    font-family: 'lato';
+    font-size: 16px;
+    color: var(--turquoise);
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
 }
