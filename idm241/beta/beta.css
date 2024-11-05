@@ -130,6 +130,13 @@ video {
     row-gap: 10px;
 }
 
+.book-cover img {
+    display: block;
+    width: 141.6px;
+    height: 200px;
+    margin: 0 auto;
+}
+
 .wtr-button {
     display: flex;
     justify-content: center;
