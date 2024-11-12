@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'merriweather';
-    src: url('fonts/merriweather-bold.ttf') format('truetype');
+    src: url('../../fonts/merriweather-bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'lato';
-    src: url('fonts/lato-regular.ttf') format('truetype');
+    src: url('../../fonts/lato-regular.ttf') format('truetype');
 }
 
 :root {
@@ -18,6 +18,8 @@
     --turquoise: #00635D;
     --light-gray: #F2F2F2;
     --med-gray: #999999;
+    --yellow: #FDD44F;
+    -orange: #FFBD27;
 }
 
 * {
@@ -32,28 +34,7 @@ html, body{
     text-wrap: pretty;
 }
 
-/*index page*/
-.nav a {
-    display: block;
-    background-color: var(--tan);
-    margin: 50px auto;
-    width: 50vw;
-    outline: var(--brown) solid 2px;
-    border-radius: 20px;
-    box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
-    justify-content: center;
-    text-decoration-color: var(--brown);
-}
-
-a h2 {
-    font-family: 'merriweather';
-    color: var(--brown);
-    text-align: center;
-    font-size: 36px;
-    padding: 20px;
-}
-
-/*alpha*/
+/*descriptions*/
 h1 {
     font-family: 'merriweather';
     font-size: 48px;
@@ -63,14 +44,15 @@ h1 {
     margin: 0;
 }
 
-.description {
+
+.descriptions {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.description > div {
-    max-width: 800px;
+.descriptions > div {
+    max-width: 500px;
     margin: 25px;
     padding: 50px;
     background-color: var(--tan);
@@ -79,12 +61,25 @@ h1 {
     box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
 }
 
+h2 {
+    font-family: 'merriweather';
+    font-size: 32px;
+    color: var(--brown);
+    text-decoration: underline;
+    text-align: center;
+    margin: 0;
+}
+
 h3 {
     font-family: 'merriweather';
     font-size: 24px;
     color: var(--brown);
+    margin-top: 50px;
+}
+
+.title a {
     text-align: center;
-    margin-top: 0;
+    text-decoration-color: var(--brown);
 }
 
 p, ul{
@@ -103,53 +98,23 @@ ul {
     padding-left: 25px;
 }
 
-.loops-and-modes p{
+.wtr-loops-and-modes p, .stars-loops-and-modes p, .ni-loops-and-modes p{
     text-decoration: none;
 }
 
 .video {
-    display: block;
-    width: fit-content;
-    max-width: 80vw;
-    margin: 25px auto 50px;
-    padding: 50px;
-    background-color: var(--tan);
-    outline: var(--brown) solid 2px;
-    border-radius: 20px;
-    box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
+    height: fit-content;
 }
 
 video {
     display: block;
     width: 100%;
     max-width: 800px;
-    margin: auto;
+    margin: 20px auto 0;
     border-radius: 15px;
 }
 
 .space p{
     text-decoration: none;
     margin: 0;
-}
-
-/*alpha build*/
-.alpha-button {
-    display: flex;
-    justify-content: center;
-}
-
-.alpha-button button{
-    font-family: 'lato';
-    font-size: 16px;
-    color: var(--white);
-    background-color: var(--green);
-    border: none;
-    border-radius: 5px;
-    padding: 6px 10px;
-    margin: 25px;
-    cursor: pointer;
-}
-
-.alpha-button button:hover {
-    background-color: var(--dark-green);
 }
