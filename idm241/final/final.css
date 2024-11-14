@@ -34,7 +34,6 @@ html, body{
     text-wrap: pretty;
 }
 
-/*descriptions*/
 h1 {
     font-family: 'merriweather';
     font-size: 48px;
@@ -43,7 +42,19 @@ h1 {
     margin: 50px 0 25px;
 }
 
+h3 {
+    font-family: 'merriweather';
+    font-size: 24px;
+    color: var(--brown);
+    margin: 50px 0;
+}
 
+.title a {
+    text-align: center;
+    text-decoration-color: var(--brown);
+}
+
+/*descriptions*/
 .descriptions {
     display: flex;
     flex-wrap: wrap;
@@ -69,16 +80,8 @@ h2 {
     margin: 0;
 }
 
-h3 {
-    font-family: 'merriweather';
-    font-size: 24px;
-    color: var(--brown);
-    margin: 50px 0;
-}
-
-.title a {
-    text-align: center;
-    text-decoration-color: var(--brown);
+.descriptions h3 {
+    margin: 40px 0 20px;
 }
 
 p, ul{
@@ -94,6 +97,7 @@ p {
 }
 
 ul {
+    margin: 5px 0 0;
     padding-left: 25px;
 }
 
