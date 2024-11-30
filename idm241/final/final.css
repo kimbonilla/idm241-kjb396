@@ -121,3 +121,85 @@ video {
     text-decoration: none;
     margin: 0;
 }
+
+/*build*/
+.build {
+    width: 142px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.book-cover img {
+    display: block;
+    width: 141.6px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.wtr-button {
+    display: flex;
+    justify-content: center;
+}
+
+.wtr-button button{
+    font-family: 'lato';
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* star container */
+.star-rating {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* default star style */
+.star {
+    width: 30px;
+    height: 30px;
+    background: url('star.svg') no-repeat center/contain;
+    fill: var(--med-gray);
+    transition: fill 0.3s ease, opacity 0.3s ease;
+    opacity: 0.5;
+}
+
+/* hover state */
+.star:hover,
+.star.hovered {
+    opacity: 1;
+    background: url('star.svg') no-repeat center/contain;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(676%) hue-rotate(1deg) brightness(101%);
+}
+
+/* clicked (selected) state */
+.star.selected, .star :active{
+    opacity: 1;
+    background: url('star.svg') no-repeat center/contain;
+    filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(600%) hue-rotate(1deg) brightness(120%);
+}
+
+/*not interested button*/
+.ni-button {
+    margin: 0 auto;
+}
+
+.ni-button button{
+    font-family: 'lato';
+    font-size: 16px;
+    color: var(--turquoise);
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
+}
