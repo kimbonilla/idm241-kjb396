@@ -71,3 +71,42 @@ niBtn.addEventListener("click", function() {
         fullDiv.removeAttribute("style");
     }
 });
+
+/*book description*/
+const bookCover = document.querySelector(".book-cover");
+const bookDescription = document.querySelector(".book-description");
+
+bookCover.addEventListener("mouseenter", () => {
+    bookDescription.style.opacity = "1";
+    bookDescription.style.visibility = "visible";
+});
+
+bookCover.addEventListener("mouseleave", () => {
+    bookDescription.style.opacity = "0";
+    setTimeout(() => {
+        bookDescription.style.visibility = "hidden";
+    }, 200);
+});
+
+bookDescription.addEventListener("mouseleave", () => {
+    bookDescription.style.opacity = "0";
+    setTimeout(() => {
+        bookDescription.style.visibility = "hidden";
+    }, 200);
+});
+
+/*more/hide button*/
+const truncateBtn = document.querySelector(".book-description button");
+const truncateText = document.querySelector(".truncated-text");
+
+truncateBtn.addEventListener("click", function () {
+    if (truncateBtn.innerHTML === "...more") {
+        truncateBtn.innerHTML = "hide";
+        truncateText.classList.add("untruncated-text");
+        truncateText.classList.remove("truncated-text");
+    } else {
+        truncateBtn.innerHTML = "...more";
+        truncateText.classList.add("truncated-text");
+        truncateText.classList.remove("untruncated-text");
+    }
+});

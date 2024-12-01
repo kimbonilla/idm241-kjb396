@@ -245,7 +245,7 @@ video {
     box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
     visibility: hidden;
     opacity: 0;
-    transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .avg-rating {
@@ -282,11 +282,19 @@ video {
 }
 
 .truncated-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-height: 89px;
+    opacity: 1;
+    transition: max-height 400ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.untruncated-text {
+    overflow: hidden;
+    text-overflow: unset;
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 400ms ease-in-out, opacity 300ms ease-in-out;
 }
 
 .book-description button {
@@ -299,6 +307,8 @@ video {
     border: none;
     margin: 0;
     cursor: pointer;
+    transition: opacity 300ms ease-in-out;
+    opacity: 1;
 }
 
 .book-cover:hover .book-description, .book-description:hover {
