@@ -19,7 +19,7 @@
     --light-gray: #F2F2F2;
     --med-gray: #999999;
     --yellow: #FDD44F;
-    -orange: #FFBD27;
+    --orange: #FFBD27;
 }
 
 * {
@@ -124,7 +124,17 @@ video {
 
 /*build*/
 .build {
-    width: 142px;
+    width: fit-content;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.ni-overlay {
+    width: fit-content;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -133,11 +143,18 @@ video {
     row-gap: 10px;
 }
 
-.book-cover img {
+.book-cover {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.book-cover-img img {
     display: block;
-    width: 141.6px;
+    width: 161.6px;
     height: 200px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .wtr-button {
@@ -155,12 +172,14 @@ video {
     padding: 6px 10px;
     margin: 0 auto;
     cursor: pointer;
+    transition: all 250ms linear;
 }
 
 /* star container */
 .star-rating {
     display: flex;
     gap: 5px;
+    margin: 0 auto;
     cursor: pointer;
 }
 
@@ -170,21 +189,18 @@ video {
     height: 30px;
     background: url('star.svg') no-repeat center/contain;
     fill: var(--med-gray);
-    transition: fill 0.3s ease, opacity 0.3s ease;
-    opacity: 0.5;
+    transition: all 250ms;
 }
 
 /* hover state */
 .star:hover,
 .star.hovered {
-    opacity: 1;
     background: url('star.svg') no-repeat center/contain;
     filter: brightness(0) saturate(100%) invert(72%) sepia(48%) saturate(676%) hue-rotate(1deg) brightness(101%);
 }
 
 /* clicked (selected) state */
-.star.selected, .star :active{
-    opacity: 1;
+.star.selected{
     background: url('star.svg') no-repeat center/contain;
     filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(600%) hue-rotate(1deg) brightness(120%);
 }
@@ -198,8 +214,132 @@ video {
     font-family: 'lato';
     font-size: 16px;
     color: var(--turquoise);
+    text-decoration: underline;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     margin: 0 auto;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.ni-overlay {
+    transition: all 200ms ease-in-out;
+}
+
+.book-description {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    display: flex;
+    width: 400px;
+    max-width: 37vw;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin: 0 20px 0 0;
+    padding: 20px;
+    row-gap: 10px;
+    background-color: var(--white);
+    outline: var(--brown) solid 5px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.avg-rating {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 10px;
+}
+
+.book-description h4 {
+    font-family: 'merriweather';
+    font-size: 16px;
+    margin: 0;
+}
+
+.book-description h5 {
+    font-family: 'merriweather';
+    font-size: 14px;
+    margin: 0;
+}
+
+.book-description p {
+    font-size: 14px;
+    margin: 0;
+    text-decoration: none;
+}
+
+.avg-rating img {
+    width: 90px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.truncated-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-description button {
+    font-family: 'lato';
+    font-size: 14px;
+    color: var(--turquoise);
+    text-decoration: underline;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+.book-cover:hover .book-description, .book-description:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .book-cover {
+        width: 141.6px;
+        overflow-x: visible;
+    }
+
+    .book-cover-img img {
+        width: 141.6px;
+        padding: 0;
+    }
+
+    .book-description {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 400px;
+        max-width: 90vw;
+        justify-self: center;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        margin: 20px;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+
+
+
+    .book-cover:hover .book-description, .book-description:hover {
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
 }

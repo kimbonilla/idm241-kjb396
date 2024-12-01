@@ -10,19 +10,35 @@
 <body>
     <h1>Final</h1>
     <div class="build">
-        <div class="book-cover">
-            <img src="book-cover.png" alt="Book Cover">
-        </div>
-        <div class="wtr-button">
-            <button>Want to Read</button>
-        </div>
-        <div class="star-rating" id="starRating">
-            <!-- SVG star icons for the rating system -->
-            <div class="star" data-rating="1"></div>
-            <div class="star" data-rating="2"></div>
-            <div class="star" data-rating="3"></div>
-            <div class="star" data-rating="4"></div>
-            <div class="star" data-rating="5"></div>
+        <div class="ni-overlay">
+            <div class="book-cover">
+                <div class="book-cover-img">
+                    <img src="book-cover.png" alt="Book Cover">
+                </div>
+                <div class="book-description">
+                    <h4>Harry Potter and the Sorcerer&#39;s Stone</h4>
+                    <div class="avg-rating">
+                        <h5>By: J.K. Rowling</h5>
+                        <img src="rating.png" alt="Star Rating">
+                    </div>
+                    <p> 4 star avg. rating - 10,482,583 ratings </p>
+                    <div class="truncated-text">
+                    <p>Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!</p>
+                    </div>
+                    <button>...more</button>
+                </div>
+            </div>
+            <div class="wtr-button">
+                <button>Want to Read</button>
+            </div>
+            <div class="star-rating" id="starRating">
+                <!-- SVG star icons for the rating system -->
+                <div class="star" data-rating="1"></div>
+                <div class="star" data-rating="2"></div>
+                <div class="star" data-rating="3"></div>
+                <div class="star" data-rating="4"></div>
+                <div class="star" data-rating="5"></div>
+            </div>
         </div>
         <div class="ni-button">
             <button>Not Interested</button>
@@ -62,6 +78,8 @@
                     <ul>
                         <li>Button width grows to 135 px</li>
                         <li>Content changes to a checkmark with the text "Want to Read"</li>
+                        <li>Button color fades to light gray</li>
+                        <li>Text color fades to black</li>
                     </ul>
                 </ul>
             </ul>
@@ -79,6 +97,8 @@
                 <ul>
                     <li>Button width shrinks to 116 px</li>
                     <li>Content changes to just "Want to Read" text</li>
+                    <li>Button color fades to green</li>
+                    <li>Text color fades to white</li>
                 </ul>
             </ul>
             </div>
@@ -98,6 +118,8 @@
                     <ul>
                         <li>Button width grows to 135 px</li>
                         <li>Content changes to a checkmark with the text "Want to Read"</li>
+                        <li>Button color fades to light gray</li>
+                        <li>Text color fades to black</li>
                     </ul>
                 </ul>
             </ul>
@@ -115,6 +137,8 @@
                 <ul>
                     <li>Button width shrinks to 116 px</li>
                     <li>Content changes to just "Want to Read" text</li>
+                    <li>Button color fades to green</li>
+                    <li>Text color fades to white</li>
                 </ul>
             </ul>
             </div>
@@ -170,7 +194,7 @@
                 <li>Hover OFF</li>
                 <ul>
                     <li>Cursor changes to pointer</li>
-                    <li>All stars fade to gray</li>
+                    <li>All stars fade to previous state</li>
                 </ul>
                 <li>Mouse UP on Last Orange Star</li>
                 <ul>
@@ -212,7 +236,7 @@
                 <li>Hover OFF</li>
                 <ul>
                     <li>Cursor changes to pointer</li>
-                    <li>All stars fade to gray</li>
+                    <li>All stars fade to previous state</li>
                 </ul>
                 <li>Mouse UP on Last Orange Star</li>
                 <ul>

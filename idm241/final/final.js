@@ -59,12 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /*ni button*/
 const niBtn = document.querySelector(".ni-button button");
-const fullDiv = document.querySelector(".build");
+const fullDiv = document.querySelector(".ni-overlay");
 
 niBtn.addEventListener("click", function() {
     if (niBtn.innerHTML === "Not Interested") {
         niBtn.innerHTML = 'Interested';
-        niBtn.style.color = "var(--mid-gray)";
         fullDiv.style.opacity = "60%";
     } else {
         niBtn.innerHTML = "Not Interested";
