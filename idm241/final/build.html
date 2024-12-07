@@ -109,10 +109,12 @@
                 <li>Hover ON</li>
                 <ul>
                     <li>Cursor changes to finger</li>
+                    <li>Button fades darker</li>
                 </ul>
                 <li>Hover OFF</li>
                 <ul>
                     <li>Cursor changes to pointer</li>
+                    <li>Button fades to default</li>
                 </ul>
                 <li>Mouse UP</li>
                     <ul>
@@ -127,10 +129,12 @@
                 <li>Hover ON</li>
                 <ul>
                     <li>Cursor changes to finger</li>
+                    <li>Button fades darker</li>
                 </ul>
                 <li>Hover OFF</li>
                 <ul>
                     <li>Cursor changes to pointer</li>
+                    <li>Button fades to default</li>
                 </ul>
                 <li>Mouse UP</li>
                 <ul>
@@ -148,10 +152,12 @@
                 <li>Hover ON</li>
                 <ul>
                     <li>Cursor changes to finger</li>
+                    <li>Button fades darker</li>
                 </ul>
                 <li>Hover OFF</li>
                 <ul>
                     <li>Cursor changes to pointer</li>
+                    <li>Button fades to default</li>
                 </ul>
                 <li>Mouse UP</li>
                     <ul>
@@ -166,8 +172,13 @@
                 <li>Hover ON</li>
                 <ul>
                     <li>Cursor changes to finger</li>
+                    <li>Button fades darker</li>
                 </ul>
                 <li>Hover OFF</li>
+                <ul>
+                    <li>Cursor changes to pointer</li>
+                    <li>Button fades to default</li>
+                </ul>
                 <ul>
                     <li>Cursor changes to pointer</li>
                 </ul>
@@ -393,22 +404,22 @@
             </div>
         </div>
         <div class="modal-description">
-            <h2>Book Cover</h2>
+            <h2>Book Cover and Description Modal</h2>
             <div class="modal-triggers">
             <h3>Triggers</h3>
             <ul>
                 <li>Hover ON Book Cover</li>
-                <li>Hover OFF Modal and Book Cover</li>
+                <li>Hover OFF Book Cover and Book Description Modal</li>
             </ul>
             </div>
             <div class="modal-rules">
             <h3>Rules</h3>
             <ul>
-                <li>Hover ON</li>
+                <li>Hover ON Book Cover</li>
                 <ul>
                     <li>Modal with book description fades in</li>
                 </ul>
-                <li>Hover OFF</li>
+                <li>Hover OFF Book Cover and Book Description Modal</li>
                 <ul>
                     <li>Modal with book description fades out</li>
                 </ul>
@@ -417,11 +428,11 @@
             <div class="modal-feedback">
             <h3>Feedback</h3>
             <ul>
-                <li>Hover ON</li>
+                <li>Hover ON Book Cover</li>
                 <ul>
                     <li>Modal with book description fades in</li>
                 </ul>
-                <li>Hover OFF</li>
+                <li>Hover OFF Book Cover and Book Description Modal</li>
                 <ul>
                     <li>Modal with book description fades out</li>
                 </ul>
@@ -433,7 +444,7 @@
                     <li>Loops</li>
                     <li>Modes</li>
                     <ul>
-                        <li>Hover ON</li>
+                        <li>Hover ON Book Cover</li>
                         <ul>
                             <li>Modal with book description fades in</li>
                         </ul>
@@ -442,9 +453,16 @@
             </div>
         </div>
         <div class="more-description">
-            <h2>"More" Button</h2>
+            <h2>"More..."/"Hide" Button</h2>
             <div class="more-triggers">
             <h3>Triggers</h3>
+            <p>"More..." State</p>
+            <ul>
+                <li>Hover ON</li>
+                <li>Hover OFF</li>
+                <li>Mouse UP</li>
+            </ul>
+            <p>"Hide" State</p>
             <ul>
                 <li>Hover ON</li>
                 <li>Hover OFF</li>
@@ -453,92 +471,83 @@
             </div>
             <div class="more-rules">
             <h3>Rules</h3>
+            <p>"More..." State</p>
             <ul>
                 <li>Hover ON</li>
-                    <ul>
-                        <li>Cursor changes to finger</li>
-                    </ul>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                    <li>Text fades darker</li>
+                </ul>
                 <li>Hover OFF</li>
-                    <ul>
-                        <li>Cursor changes to pointer</li>
-                    </ul>
+                <ul>
+                    <li>Cursor changes to pointer</li>
+                    <li>Text fades to default</li>
+                </ul>
                 <li>Mouse UP</li>
                     <ul>
                         <li>Full book description is revealed</li>
                         <li>Description box height grows to fit full description</li>
-                        <li>"...more" button's text changes to "hide"</li>
+                        <li>Text changes to "hide"</li>
+                    </ul>
+            </ul>
+            <p>"Less" State</p>
+            <ul>
+                <li>Hover ON</li>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                    <li>Text fades darker</li>
+                </ul>
+                <li>Hover OFF</li>
+                <ul>
+                    <li>Cursor changes to pointer</li>
+                    <li>Text fades to default</li>
+                </ul>
+                <li>Mouse UP</li>
+                    <ul>
+                        <li>Full book description shortens into truncated description</li>
                     </ul>
             </ul>
             </div>
             <div class="more-feedback">
             <h3>Feedback</h3>
+            <p>"More..." State</p>
             <ul>
                 <li>Hover ON</li>
-                    <ul>
-                        <li>Cursor changes to finger</li>
-                    </ul>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                    <li>Text fades darker</li>
+                </ul>
                 <li>Hover OFF</li>
-                    <ul>
-                        <li>Cursor changes to pointer</li>
-                    </ul>
+                <ul>
+                    <li>Cursor changes to pointer</li>
+                    <li>Text fades to default</li>
+                </ul>
                 <li>Mouse UP</li>
                     <ul>
                         <li>Full book description is revealed</li>
                         <li>Description box height grows to fit full description</li>
-                        <li>"...more" button's text changes to "hide"</li>
+                        <li>Text changes to "hide"</li>
+                    </ul>
+            </ul>
+            <p>"Hide" State</p>
+            <ul>
+                <li>Hover ON</li>
+                <ul>
+                    <li>Cursor changes to finger</li>
+                    <li>Text fades darker</li>
+                </ul>
+                <li>Hover OFF</li>
+                <ul>
+                    <li>Cursor changes to pointer</li>
+                    <li>Text fades to default</li>
+                </ul>
+                <li>Mouse UP</li>
+                    <ul>
+                        <li>Full book description shortens into truncated description</li>
                     </ul>
             </ul>
             </div>
             <div class="more-loops-and-modes">
-                <h3>Loops &#38; Modes</h3>
-                <p>none</p>
-            </div>
-        </div>
-        <div class="less-description">
-            <h2>"Hide" Button</h2>
-            <div class="more-triggers">
-            <h3>Triggers</h3>
-            <ul>
-                <li>Hover ON</li>
-                <li>Hover OFF</li>
-                <li>Mouse UP</li>
-            </ul>
-            </div>
-            <div class="less-rules">
-            <h3>Rules</h3>
-            <ul>
-                <li>Hover ON</li>
-                    <ul>
-                        <li>Cursor changes to finger</li>
-                    </ul>
-                <li>Hover OFF</li>
-                    <ul>
-                        <li>Cursor changes to pointer</li>
-                    </ul>
-                <li>Mouse UP</li>
-                    <ul>
-                        <li>Full book description shortens into truncated description</li>
-                    </ul>
-            </ul>
-            </div>
-            <div class="less-feedback">
-            <h3>Feedback</h3>
-            <ul>
-                <li>Hover ON</li>
-                    <ul>
-                        <li>Cursor changes to finger</li>
-                    </ul>
-                <li>Hover OFF</li>
-                    <ul>
-                        <li>Cursor changes to pointer</li>
-                    </ul>
-                <li>Mouse UP</li>
-                    <ul>
-                        <li>Full book description shortens into truncated description</li>
-                    </ul>
-            </ul>
-            </div>
-            <div class="less-loops-and-modes">
                 <h3>Loops &#38; Modes</h3>
                 <p>none</p>
             </div>

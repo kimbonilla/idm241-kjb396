@@ -65,14 +65,24 @@ document.querySelectorAll(".ni-button").forEach((niBtn) => {
     niBtn.addEventListener("click", function () {
         if (niBtn.innerHTML === "Not Interested") {
             niBtn.innerHTML = "Interested";
+
+            // Show the overlay and then fade it in
             niOverlay.style.display = "block";
+            setTimeout(() => {
+                niOverlay.style.opacity = "1"; // Trigger fade-in
+            }, 10); // Small delay to allow the display change to take effect
         } else {
             niBtn.innerHTML = "Not Interested";
-            niBtn.removeAttribute("style");
-            niOverlay.removeAttribute("style");
+
+            // Fade out the overlay and then hide it
+            niOverlay.style.opacity = "0";
+            setTimeout(() => {
+                niOverlay.style.display = "none";
+            }, 200); // Match this with the transition duration
         }
     });
 });
+
 
 /*book description*/
 document.querySelectorAll(".book-cover").forEach((bookCover) => {

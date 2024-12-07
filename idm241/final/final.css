@@ -175,6 +175,10 @@ video {
     transition: all 250ms linear;
 }
 
+.wtr-button button:hover {
+    filter: brightness(0.9);
+}
+
 /* star container */
 .star-rating {
     display: flex;
@@ -235,25 +239,23 @@ video {
 .ni-box {
     display: none;
     position: absolute;
-    z-index: 1000;
+    z-index: 999;
     bottom: 31px;
     width: 170px;
     height: 281px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
 }
 
 .ni-box p {
     text-decoration: none;
 }
 
-.ni-overlay {
-    transition: all 200ms ease-in-out;
-}
-
 /* book description */
 .book-description {
     position: absolute;
-    z-index: 999;
+    z-index: 1000;
     top: 0%;
     left: 100%;
     display: none;
@@ -334,6 +336,11 @@ video {
     cursor: pointer;
     transition: opacity 300ms ease-in-out;
     opacity: 1;
+    transition: all 200ms ease-in-out;
+}
+
+.book-description button:hover {
+    color: #002926;
 }
 
 .book-cover:hover .book-description, .book-description:hover {
