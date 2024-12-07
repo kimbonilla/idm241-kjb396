@@ -342,11 +342,6 @@ video {
 }
 
 @media (max-width: 850px) {
-    .book-cover {
-        width: 141.6px;
-        overflow-x: visible;
-    }
-
     .book-cover-img img {
         width: 141.6px;
         padding: 0;
@@ -354,24 +349,25 @@ video {
 
     .book-description {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 45vw;
+        min-width: 200px;
         display: flex;
-        width: 400px;
-        max-width: 90vw;
         justify-self: center;
         flex-direction: column;
         justify-content: left;
         align-items: left;
-        margin: 20px;
         visibility: hidden;
         opacity: 0;
         transition: opacity 300ms ease-in-out;
+        overflow: hidden;
     }
+}
 
-    /*.book-cover:hover .book-description, .book-description:hover {
-        display: flex;
-        visibility: visible;
-        opacity: 1;
-    }*/
+@media (max-width: 454px) {
+    .book-description {
+        max-width: 90vw;
+    }
 }
