@@ -78,20 +78,20 @@ const bookDescription = document.querySelector(".book-description");
 
 bookCover.addEventListener("mouseenter", () => {
     bookDescription.style.opacity = "1";
-    bookDescription.style.visibility = "visible";
+    bookDescription.style.display = "block";
 });
 
 bookCover.addEventListener("mouseleave", () => {
     bookDescription.style.opacity = "0";
     setTimeout(() => {
-        bookDescription.style.visibility = "hidden";
+        bookDescription.style.display = "none";
     }, 200);
 });
 
 bookDescription.addEventListener("mouseleave", () => {
     bookDescription.style.opacity = "0";
     setTimeout(() => {
-        bookDescription.style.visibility = "hidden";
+        bookDescription.style.display = "none";
     }, 200);
 });
 

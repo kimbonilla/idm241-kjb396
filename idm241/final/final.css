@@ -222,6 +222,10 @@ video {
     transition: all 200ms ease-in-out;
 }
 
+.ni-button button:hover {
+    color: #002926;
+}
+
 .ni-overlay {
     transition: all 200ms ease-in-out;
 }
