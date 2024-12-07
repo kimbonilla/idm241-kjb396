@@ -1,20 +1,20 @@
 /*wtr button*/
-const wtrBtn = document.querySelector(".wtr-button button");
-
-wtrBtn.addEventListener("click", function() {
-    if (wtrBtn.innerHTML === "Want to Read") {
-        wtrBtn.innerHTML = '<img src="../alpha/checkmark.png" alt="checkmark"> Want to Read';
-        wtrBtn.style.backgroundColor = "var(--light-gray)";
-        wtrBtn.style.color = "var(--black)";
-    } else {
-        wtrBtn.innerHTML = "Want to Read";
-        wtrBtn.removeAttribute("style");
-    }
+document.querySelectorAll(".wtr-button button").forEach((wtrBtn) => {
+    wtrBtn.addEventListener("click", function () {
+        if (wtrBtn.innerHTML === "Want to Read") {
+            wtrBtn.innerHTML = '<img src="../alpha/checkmark.png" alt="checkmark"> Want to Read';
+            wtrBtn.style.backgroundColor = "var(--light-gray)";
+            wtrBtn.style.color = "var(--black)";
+        } else {
+            wtrBtn.innerHTML = "Want to Read";
+            wtrBtn.removeAttribute("style");
+        }
+    });
 });
 
 /*star rating*/
-document.addEventListener('DOMContentLoaded', () => {
-    const stars = document.querySelectorAll('.star');
+document.querySelectorAll(".star-rating").forEach((ratingContainer) => {
+    const stars = ratingContainer.querySelectorAll('.star'); // Scoped to this container
     let selectedRating = 0;
 
     stars.forEach(star => {
@@ -31,9 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         star.addEventListener('click', () => {
             const rating = star.getAttribute('data-rating');
             if (selectedRating == rating) {
+                // Deselect
                 selectedRating = 0;
-                resetStars();
+                resetStars(); // Ensure all stars are reset
             } else {
+                // Select
                 selectedRating = rating;
                 resetStars();
                 highlightStars(selectedRating, true);
@@ -51,62 +53,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function resetStars() {
         stars.forEach(star => {
-            star.classList.remove('hovered');
-            star.classList.remove('selected');
+            star.classList.remove('hovered', 'selected'); // Clear both hovered and selected
         });
     }
 });
 
 /*ni button*/
-const niBtn = document.querySelector(".ni-button button");
-const fullDiv = document.querySelector(".ni-overlay");
+document.querySelectorAll(".ni-button").forEach((niBtn) => {
+    const niOverlay = niBtn.previousElementSibling;
 
-niBtn.addEventListener("click", function() {
-    if (niBtn.innerHTML === "Not Interested") {
-        niBtn.innerHTML = 'Interested';
-        fullDiv.style.opacity = "60%";
-    } else {
-        niBtn.innerHTML = "Not Interested";
-        niBtn.removeAttribute("style");
-        fullDiv.removeAttribute("style");
-    }
+    niBtn.addEventListener("click", function () {
+        if (niBtn.innerHTML === "Not Interested") {
+            niBtn.innerHTML = "Interested";
+            niOverlay.style.display = "block";
+        } else {
+            niBtn.innerHTML = "Not Interested";
+            niBtn.removeAttribute("style");
+            niOverlay.removeAttribute("style");
+        }
+    });
 });
 
 /*book description*/
-const bookCover = document.querySelector(".book-cover");
-const bookDescription = document.querySelector(".book-description");
+document.querySelectorAll(".book-cover").forEach((bookCover) => {
+    const bookDescription = bookCover.querySelector(".book-description");
 
-bookCover.addEventListener("mouseenter", () => {
-    bookDescription.style.opacity = "1";
-    bookDescription.style.display = "block";
-});
+    bookCover.addEventListener("mouseenter", () => {
+        bookDescription.style.opacity = "1";
+        bookDescription.style.display = "flex";
+    });
 
-bookCover.addEventListener("mouseleave", () => {
-    bookDescription.style.opacity = "0";
-    setTimeout(() => {
-        bookDescription.style.display = "none";
-    }, 200);
-});
+    bookCover.addEventListener("mouseleave", () => {
+        bookDescription.style.opacity = "0";
+        setTimeout(() => {
+            bookDescription.style.display = "none";
+        }, 200);
+    });
 
-bookDescription.addEventListener("mouseleave", () => {
-    bookDescription.style.opacity = "0";
-    setTimeout(() => {
-        bookDescription.style.display = "none";
-    }, 200);
+    bookDescription.addEventListener("mouseleave", () => {
+        bookDescription.style.opacity = "0";
+        setTimeout(() => {
+            bookDescription.style.display = "none";
+        }, 200);
+    });
 });
 
 /*more/hide button*/
-const truncateBtn = document.querySelector(".book-description button");
-const truncateText = document.querySelector(".truncated-text");
+document.querySelectorAll(".book-description button").forEach((truncateBtn) => {
+    const truncateText = truncateBtn.closest(".book-description").querySelector(".truncated-text");
 
-truncateBtn.addEventListener("click", function () {
-    if (truncateBtn.innerHTML === "...more") {
-        truncateBtn.innerHTML = "hide";
-        truncateText.classList.add("untruncated-text");
-        truncateText.classList.remove("truncated-text");
-    } else {
-        truncateBtn.innerHTML = "...more";
-        truncateText.classList.add("truncated-text");
-        truncateText.classList.remove("untruncated-text");
-    }
+    truncateBtn.addEventListener("click", function () {
+        if (truncateBtn.innerHTML === "...more") {
+            setTimeout(() => {
+                truncateBtn.innerHTML = "hide";
+            }, 100);
+            truncateText.classList.add("untruncated-text");
+            truncateText.classList.remove("truncated-text");
+        } else {
+            setTimeout(() => {
+                truncateBtn.innerHTML = "...more";
+            }, 150);
+            truncateText.classList.add("truncated-text");
+            truncateText.classList.remove("untruncated-text");
+        }
+    });
 });
