@@ -80,23 +80,33 @@ document.querySelectorAll(".book-cover").forEach((bookCover) => {
 
     bookCover.addEventListener("mouseenter", () => {
         bookDescription.style.opacity = "1";
-        bookDescription.style.display = "flex";
+        bookDescription.style.display = "flex"; // Ensure it is displayed when hovering on the cover
     });
 
     bookCover.addEventListener("mouseleave", () => {
-        bookDescription.style.opacity = "0";
-        setTimeout(() => {
-            bookDescription.style.display = "none";
-        }, 200);
+        if (!bookDescription.matches(':hover')) {
+            bookDescription.style.opacity = "0";
+            setTimeout(() => {
+                bookDescription.style.display = "none";
+            }, 200);
+        }
+    });
+
+    bookDescription.addEventListener("mouseenter", () => {
+        bookDescription.style.opacity = "1";
+        bookDescription.style.display = "flex"; // Keep the description visible when hovering on the description
     });
 
     bookDescription.addEventListener("mouseleave", () => {
-        bookDescription.style.opacity = "0";
-        setTimeout(() => {
-            bookDescription.style.display = "none";
-        }, 200);
+        if (!bookCover.matches(':hover')) {
+            bookDescription.style.opacity = "0";
+            setTimeout(() => {
+                bookDescription.style.display = "none";
+            }, 200);
+        }
     });
 });
+
 
 /*more/hide button*/
 document.querySelectorAll(".book-description button").forEach((truncateBtn) => {
