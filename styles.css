@@ -183,3 +183,24 @@ h2 {
     text-align: center;
     margin: 50px 50px 10px;
 }
+
+.writing {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.case-study p{
+    text-decoration: none;
+}
+
+.case-study p a {
+    color: var(--turquoise);
+}
+
+.writing img {
+    display: block;
+    max-height: 33vh;
+    margin: 25px auto;
+    border: var(--brown) solid 2px;
+    border-radius: 5px;
+}
