@@ -162,3 +162,13 @@ video {
 }
 
 /*case study*/
+.hero img {
+    display: block;
+    max-width: 90vw;
+    max-height: 50vh;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border: var(--brown) solid 5px;
+    border-radius: 10px;
+}
