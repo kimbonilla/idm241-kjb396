@@ -211,3 +211,26 @@ h2 {
     border: var(--brown) solid 2px;
     border-radius: 5px;
 }
+
+.writing .button {
+    display: flex;
+    margin: 10px auto 25px;
+    justify-content: center;
+
+}
+
+.writing .button a{
+    font-family: 'lato';
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.writing .button a:hover {
+    background-color: var(--dark-green);
+}
