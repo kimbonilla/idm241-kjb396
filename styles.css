@@ -185,12 +185,13 @@ h2 {
     font-size: 32px;
     color: var(--brown);
     text-align: center;
-    margin: 50px 50px 10px;
+    margin: 50px 0 10px;
 }
 
 .writing {
     max-width: 850px;
     margin: 25px auto 0;
+    padding: 0 20px;
 }
 
 .case-study p{
@@ -204,6 +205,8 @@ h2 {
 .writing img {
     display: block;
     max-height: 33vh;
+    width: auto;
+    height: auto;
     margin: 25px auto;
     border: var(--brown) solid 2px;
     border-radius: 5px;
