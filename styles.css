@@ -38,6 +38,7 @@ html, body{
     background-color: var(--tan);
     margin: 50px auto;
     width: 50vw;
+    min-width: 300px;
     outline: var(--brown) solid 2px;
     border-radius: 20px;
     box-shadow: 0px 6px 6px rgb(0, 0, 0, 0.3);
@@ -47,9 +48,10 @@ html, body{
 
 a h2 {
     font-family: 'merriweather';
+    font-size: 36px;
     color: var(--brown);
     text-align: center;
-    font-size: 36px;
+    text-wrap: wrap;
     padding: 20px;
 }
 
@@ -153,3 +155,10 @@ video {
 .alpha-button button:hover {
     background-color: var(--dark-green);
 }
+
+/*index again*/
+.index-p {
+    text-decoration: none;
+}
+
+/*case study*/
