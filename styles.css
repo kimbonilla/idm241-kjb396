@@ -162,13 +162,24 @@ video {
 }
 
 /*case study*/
-.hero img {
+.hero {
     display: block;
     max-width: 90vw;
     max-height: 50vh;
     width: auto;
     height: auto;
     margin: 0 auto;
+}
+
+.hero video {
     border: var(--brown) solid 5px;
     border-radius: 10px;
+}
+
+h2 {
+    font-family: 'merriweather';
+    font-size: 32px;
+    color: var(--brown);
+    text-align: center;
+    margin: 50px 50px 10px;
 }
