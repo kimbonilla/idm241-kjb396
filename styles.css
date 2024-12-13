@@ -234,3 +234,7 @@ h2 {
 .writing .button a:hover {
     background-color: var(--dark-green);
 }
+
+.writing ol li {
+    margin: 25px 5px;
+}
