@@ -238,3 +238,7 @@ h2 {
 .writing ol li {
     margin: 25px 5px;
 }
+
+.writing ol p {
+    margin: 0;
+}
